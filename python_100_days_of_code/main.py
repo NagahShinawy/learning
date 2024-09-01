@@ -17,8 +17,10 @@ def generate_sessions(limit: int = 100) -> List[Tuple[int, ...]]:
     days: List[Tuple[int, ...]] = []
 
     for day in range(1, limit + 1, 3):
-        # sessions = tuple(range(day, day + 3))  # (100, 101, 102) it is bug, limit ends with 100
-        sessions = tuple(range(day, min(day + 3, limit + 1)))
+        sessions = tuple(range(day, day + 3))  # (100, 101, 102)  it is bug, limit ends with 100, fixed using if
+        # sessions = tuple(range(day, min(day + 3, limit + 1)))
+        if day == limit:
+            sessions = (limit, )
         days.append(sessions)
 
     return days
