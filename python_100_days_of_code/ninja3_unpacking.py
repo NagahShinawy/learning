@@ -29,7 +29,7 @@ top_teams = ("Real Madrid", "Barca", "Man City")
 rm, barca, mancity = top_teams
 print(f"{rm},{barca},{mancity}")
 print("*" * 100)
-books = tech_books = [
+books = [
     ('The Pragmatic Programmer', 352),
     ('Clean Code: A Handbook of Agile Software Craftsmanship', 464),
     ('The Mythical Man-Month: Essays on Software Engineering', 336),
